@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#D0CBFF',
         position: 'relative',
         borderRadius: 19,
-        marginRight: 10,
+        marginHorizontal: 10,
+
     },
     sliderImage: {
         width: "100%",
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
         bottom: 0,
         width: "100%",
         height: 81,
-        backgroundColor: '#A0A0A0',
+        backgroundColor: '#rgba(160, 160, 160, 0.9)',
         borderRadius: 19,
         padding: 10,
     },

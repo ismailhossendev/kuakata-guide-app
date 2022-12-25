@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { StyleSheet } from 'react-native'
@@ -13,7 +13,9 @@ export default function MainLayout({ children }) {
             {/* <View style={styles.bottomBar} >
                 <BottomBar />
             </View> */}
-            {children}
+            <ScrollView style={{ marginBottom: 25 }}>
+                {children}
+            </ScrollView>
         </View>
     )
 }
@@ -21,6 +23,7 @@ export default function MainLayout({ children }) {
 const styles = StyleSheet.create({
     container: {
         marginTop: 37,
+        marginBottom: 20,
         position: 'relative',
     },
     bottomBar: {
