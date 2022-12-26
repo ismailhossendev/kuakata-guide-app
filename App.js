@@ -4,16 +4,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home from './screen/Home/Home';
 import Main from './screen/Main/Main';
+import BottomBar from './src/components/Global/BottomBar';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="main" component={Main} />
-      </Stack.Navigator>
-
+      <BottomBar />
     </NavigationContainer>
   );
 }

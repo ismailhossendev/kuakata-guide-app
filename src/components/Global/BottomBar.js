@@ -1,23 +1,34 @@
-import React from 'react'
-import { StyleSheet, ScrollView, Text } from 'react-native'
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Home from "../../../screen/Home/Home";
+import Main from "../../../screen/Main/Main";
+import Palaces from "../../../screen/Palaces/Palaces";
 
-export default function BottomBar() {
+const tab = createBottomTabNavigator();
+const BottomBar = () => {
+    const displayStyle = (route) => {
+        if (route.name === "Home") {
+            return "none";
+        } else if (route.name === "Palaces") {
+            return "none";
+        }
+        return "flex";
+    };
     return (
-        <ScrollView style={styles.BottomBar}>
-            <Text style={styles.text}>BottomBar</Text>
-        </ScrollView>
-    )
-}
+        <tab.Navigator screenOptions={({ route }) => ({
+            headerShown: false,
+            tabBarStyle: {
+                display: displayStyle(route),
+            }
+        })}>
+            <tab.Screen name="Home" component={Home} />
+            <tab.Screen name="Palaces" component={Palaces} />
+            <tab.Screen name="main" component={Main}
 
-const styles = StyleSheet.create({
-    BottomBar: {
-        height: 70,
-        width: '100%',
-        backgroundColor: '#000',
-        borderRadius: 47,
-        paddingHorizontal: 20,
-    },
-    text: {
-        color: '#fff',
-    }
-})
+            />
+        </tab.Navigator>
+    );
+};
+
+export default BottomBar;

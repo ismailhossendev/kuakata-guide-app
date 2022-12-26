@@ -5,7 +5,7 @@ import { StyleSheet } from 'react-native'
 
 export default function Header() {
     return (
-        <View style={{ flexDirection: "row", paddingHorizontal: 10, alignItems: "center", justifyContent: "space-between" }}>
+        <View style={{ flexDirection: "row", padding: 10, alignItems: "center", justifyContent: "space-between" }}>
             <Text style={{ fontSize: 27, fontWeight: "bold", }}>Kuakata</Text>
             <Image style={styles.logo} source={{ uri: "https://porzoton.com/wp-content/uploads/2020/04/Red-Crab-Island-Kuakata.jpg" }} />
         </View>
