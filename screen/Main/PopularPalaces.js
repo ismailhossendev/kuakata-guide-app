@@ -2,15 +2,16 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import PalaceCard from '../../src/components/Cards/PalaceCard'
 
-const PopularPalaces = () => {
+const PopularPalaces = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.heading}>
                 <Text style={{ fontSize: 18, fontWeight: "700" }}>Popular Palaces</Text>
-                <Text style={{ fontSize: 18, fontWeight: "700" }}>All</Text>
+                <Text style={{ fontSize: 18, fontWeight: "700" }}
+                    onPress={() => navigation.navigate("Palaces")}
+                >All</Text>
             </View>
             <View style={styles.cardContainer}>
-                <PalaceCard />
                 <PalaceCard />
                 <PalaceCard />
             </View>

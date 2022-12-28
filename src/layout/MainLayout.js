@@ -4,11 +4,14 @@ import { StatusBar } from 'expo-status-bar'
 import { StyleSheet } from 'react-native'
 import Header from '../components/Global/Header'
 
-export default function MainLayout({ children }) {
+export default function MainLayout({ children, title, navigation }) {
     return (
         <View style={styles.container} >
             <StatusBar />
-            <Header />
+            <Header
+                title={title}
+                navigation={navigation}
+            />
             <ScrollView style={{ marginBottom: 25 }}>
                 {children}
             </ScrollView>

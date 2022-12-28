@@ -6,14 +6,18 @@ import MainLayout from '../../src/layout/MainLayout'
 import Hero from './Hero'
 import PopularTravelWay from './PopularTravelWay'
 import PopularPalaces from './PopularPalaces'
+import Hotels from './Hotels'
 
-export default function Main() {
+export default function Main({ navigation }) {
     return (
         <MainLayout>
             <View style={styles.container}>
                 <Hero />
                 <PopularTravelWay />
-                <PopularPalaces />
+                <PopularPalaces
+                    navigation={navigation}
+                />
+                <Hotels />
             </View>
         </MainLayout>
     )

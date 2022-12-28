@@ -1,6 +1,5 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View, Dimensions } from 'react-native'
 import React from 'react'
-
 const GlobalCard = ({ name, image, rent }) => {
     return (
         <View style={styles.card}>
@@ -13,15 +12,17 @@ const GlobalCard = ({ name, image, rent }) => {
     )
 }
 
+
 export default GlobalCard
 
 const styles = StyleSheet.create({
     card: {
         height: 175,
-        width: "48%",
+        width: Dimensions.get('window').width / 50 * 22,
         backgroundColor: '#D0CBFF',
         borderRadius: 10,
         marginTop: 10,
+        marginLeft: 10,
         position: 'relative',
         borderWidth: 2,
         borderColor: '#91D8E4',
